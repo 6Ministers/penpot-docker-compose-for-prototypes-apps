@@ -42,6 +42,12 @@ Go to the catalog
 ``` bash
 cd penpot
 ```
+In the configuration file `docker-compose.penpot.env`, set the following parameters:
+
+Install what you need, documentation:
+
+https://help.penpot.app/technical-guide/configuration/
+
 `PENPOT_FLAGS=`
 
 ``` bash
@@ -102,4 +108,5 @@ docker-compose down
 ```
 
 ## Documentation
-
+https://help.penpot.app/technical-guide/getting-started/
+https://help.penpot.app/technical-guide/configuration/

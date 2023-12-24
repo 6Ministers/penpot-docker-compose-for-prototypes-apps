@@ -1,0 +1,20 @@
+https://subdomain.your-domain:443 {
+    header Strict-Transport-Security max-age=31536000;
+    reverse_proxy netdata:19999
+	tls admin@example.org
+	encode zstd gzip
+	
+	# Secure headers, all from .htaccess except Permissions-Policy, STS and X-Powered-By
+	header {
+		Strict-Transport-Security max-age=31536000
+		Permissions-Policy interest-cohort=()
+		X-Content-Type-Options nosniff
+		X-Frame-Options SAMEORIGIN
+		Referrer-Policy no-referrer
+		X-XSS-Protection "1; mode=block"
+		X-Permitted-Cross-Domain-Policies none
+		X-Robots-Tag "noindex, nofollow"
+		-X-Powered-By
+}
+	
+}

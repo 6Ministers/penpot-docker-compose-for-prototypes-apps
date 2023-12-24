@@ -1,0 +1,69 @@
+version: "3.5"
+
+services:
+  caddy:
+    image: caddy:alpine
+    restart: unless-stopped
+    container_name: caddy
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./certs:/certs
+      - ./config:/config
+      - ./data:/data
+      - ./sites:/srv
+    network_mode: "host"
+
+  penpot-frontend:
+    image: "penpotapp/frontend:latest"
+    restart: always
+    ports: 
+      - 127.0.0.1:9001:80 
+    volumes:
+      - penpot_assets_data:/opt/data
+    env_file:
+      - docker-compose.penpot.env
+    depends_on:
+      - penpot-backend
+      - penpot-exporter
+
+  penpot-backend:
+    image: "penpotapp/backend:latest"
+    restart: always
+    volumes:
+      - penpot_assets_data:/opt/data
+    depends_on:
+      - penpot-postgres
+      - penpot-redis
+    env_file:
+      - docker-compose.penpot.env
+    networks:
+      - penpot
+  penpot-exporter:
+    image: "penpotapp/exporter:latest"
+    env_file:
+      - docker-compose.penpot.env
+    environment:
+      # Don't touch it; this uses internal docker network to
+      # communicate with the frontend.
+      - PENPOT_PUBLIC_URI=http://penpot-frontend
+     
+  penpot-postgres:
+    image: "postgres:15"
+    restart: always
+    stop_signal: SIGINT
+    environment:
+      - POSTGRES_INITDB_ARGS=--data-checksums
+      - POSTGRES_DB=penpot
+      - POSTGRES_USER=penpot
+      - POSTGRES_PASSWORD=penpot
+    volumes:
+      - penpot_postgres_v15:/var/lib/postgresql/data
+    networks:
+      - penpot
+  penpot-redis:
+    image: redis:7
+    restart: always
+      
+volumes:
+  penpot_postgres_v15:
+  penpot_assets_data:

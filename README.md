@@ -42,14 +42,15 @@ Go to the catalog
 ``` bash
 cd penpot
 ```
-
+`PENPOT_FLAGS=`
 
 ``` bash
 PENPOT_FLAGS=enable-registration enable-login disable-demo-users enable-email-verification enable-smtp enable-log-emails enable-login-with-password enable-prepl-server
 ```
+`PENPOT_PUBLIC_URI=`
 
 ``` bash
-PENPOT_PUBLIC_URI=https://penpot.6ministers.com
+PENPOT_PUBLIC_URI=https://penpot.your-domain.com
 ```
 
 To change the domain in the `Caddyfile` to your own

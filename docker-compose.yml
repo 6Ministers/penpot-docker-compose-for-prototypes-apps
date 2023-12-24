@@ -17,7 +17,7 @@ services:
     image: "penpotapp/frontend:latest"
     restart: always
     ports: 
-      - 127.0.0.1:9001:80 
+      - 9001:80 
     volumes:
       - penpot_assets_data:/opt/data
     env_file:
@@ -36,8 +36,7 @@ services:
       - penpot-redis
     env_file:
       - docker-compose.penpot.env
-    networks:
-      - penpot
+      
   penpot-exporter:
     image: "penpotapp/exporter:latest"
     env_file:
@@ -46,7 +45,7 @@ services:
       # Don't touch it; this uses internal docker network to
       # communicate with the frontend.
       - PENPOT_PUBLIC_URI=http://penpot-frontend
-     
+ 
   penpot-postgres:
     image: "postgres:15"
     restart: always
@@ -58,8 +57,7 @@ services:
       - POSTGRES_PASSWORD=penpot
     volumes:
       - penpot_postgres_v15:/var/lib/postgresql/data
-    networks:
-      - penpot
+      
   penpot-redis:
     image: redis:7
     restart: always

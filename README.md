@@ -26,7 +26,7 @@ Download netdata instance:
 
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business/master/download.sh | sudo bash -s netdata
+curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business/master/download.sh | sudo bash -s penpot
 ```
 
 If `curl` is not found, install it:

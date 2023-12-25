@@ -22,7 +22,7 @@ Install docker and docker-compose:
 curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business-apps/master/setup.sh | sudo bash -s
 ```
 
-Download netdata instance:
+Download Penpot instance:
 
 
 ``` bash

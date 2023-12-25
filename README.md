@@ -19,14 +19,14 @@ sudo apt-get purge needrestart
 Install docker and docker-compose:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business/master/setup.sh | sudo bash -s
+curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business-apps/master/setup.sh | sudo bash -s
 ```
 
 Download netdata instance:
 
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business/master/download.sh | sudo bash -s penpot
+curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business-apps/master/download.sh | sudo bash -s penpot
 ```
 
 If `curl` is not found, install it:

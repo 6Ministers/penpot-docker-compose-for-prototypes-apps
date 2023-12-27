@@ -19,14 +19,14 @@ sudo apt-get purge needrestart
 Install docker and docker-compose:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business-apps/master/setup.sh | sudo bash -s
+curl -s https://raw.githubusercontent.com/6Ministers/penpot-docker-compose-for-prototypes-apps/master/setup.sh | sudo bash -s
 ```
 
 Download Penpot instance:
 
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/penpot-for-business-apps/master/download.sh | sudo bash -s penpot
+curl -s https://raw.githubusercontent.com/6Ministers/penpot-docker-compose-for-prototypes-apps/master/download.sh | sudo bash -s penpot
 ```
 
 If `curl` is not found, install it:

@@ -136,3 +136,22 @@ docker-compose down
 ## Documentation
 https://help.penpot.app/technical-guide/getting-started/
 https://help.penpot.app/technical-guide/configuration/
+
+
+https://help.penpot.app/technical-guide/getting-started/#create-users-using-cli
+
+**Create users using CLI**
+By default (or when disable-email-verification flag is used), email verification process is completly disabled for new registrations but is hightly recommended enabling email verification or disable registration if you are going to expose your penpot instance to the internet.
+
+If you have registration disabled, you can create additional profiles using the command line interface:
+
+docker exec -ti penpot-penpot-backend-1 python3 ./manage.py create-profile
+NOTE: the exact container name depends on your docker version and platform. For example it could be penpot-penpot-backend-1 or penpot_penpot-backend-1. You can check the correct name executing docker ps.
+
+NOTE: This script only will works when you properly have the enable-prepl-server flag set on backend (is set by default on the latest docker-compose.yaml file)
+
+You can find all configuration options in the Configuration section.
+
+
+**Backup Penpot**
+https://help.penpot.app/technical-guide/getting-started/#backup-penpot

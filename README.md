@@ -1,6 +1,5 @@
-
-# Installing Penpo![Screenshot_84](https://github.com/6Ministers/penpot-docker-compose-for-prototypes-apps/assets/11208423/aea25938-c051-4bc8-b51c-34144f2af663)
-t with docker-compose.
+![Screenshot_84](https://github.com/6Ministers/penpot-docker-compose-for-prototypes-apps/assets/11208423/aea25938-c051-4bc8-b51c-34144f2af663)
+# Installing Penpot with docker-compose.
 
 ## Quick Installation
 

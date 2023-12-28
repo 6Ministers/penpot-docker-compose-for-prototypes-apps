@@ -1,4 +1,6 @@
-# Installing Penpot with docker-compose.
+
+# Installing Penpo![Screenshot_84](https://github.com/6Ministers/penpot-docker-compose-for-prototypes-apps/assets/11208423/aea25938-c051-4bc8-b51c-34144f2af663)
+t with docker-compose.
 
 ## Quick Installation
 
@@ -106,6 +108,7 @@ docker-compose up -d
 ```
 
 Then open `https://penpot.domain.com:` to access Penpot
+![Screenshot_83](https://github.com/6Ministers/penpot-docker-compose-for-prototypes-apps/assets/11208423/97c172d9-a814-4f90-b27f-3f484a86f923)
 
 
 ## Penpot container management

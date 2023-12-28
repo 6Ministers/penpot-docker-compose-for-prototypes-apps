@@ -69,8 +69,9 @@ PENPOT_FLAGS=enable-registration enable-login disable-demo-users enable-email-ve
 ``` bash
 PENPOT_PUBLIC_URI=https://penpot.your-domain.com
 ```
-I recommend installing SMTP so that you can confirm mail during registration, invite the team and send notifications.
+I recommend setting up SMTP so that you can confirm mail during registration, invite the team and send notifications. Note that when SMTP user registration is enabled, then user creation via the console is disabled. [Create users using CLI](https://help.penpot.app/technical-guide/getting-started/#create-users-using-cli)
 
+ 
 ``` bash
 PENPOT_SMTP_DEFAULT_FROM=penpot@your-domain.com
 PENPOT_SMTP_DEFAULT_REPLY_TO=penpot@your-domain.com

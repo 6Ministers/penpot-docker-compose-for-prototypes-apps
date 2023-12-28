@@ -58,6 +58,20 @@ PENPOT_FLAGS=enable-registration enable-login disable-demo-users enable-email-ve
 ``` bash
 PENPOT_PUBLIC_URI=https://penpot.your-domain.com
 ```
+I recommend installing SMTP so that you can confirm mail during registration, invite the team and send notifications.
+
+``` bash
+PENPOT_SMTP_DEFAULT_FROM=penpot@your-domain.com
+PENPOT_SMTP_DEFAULT_REPLY_TO=penpot@your-domain.com
+PENPOT_SMTP_HOST=smtp.your-domain.com
+PENPOT_SMTP_PORT=465
+PENPOT_SMTP_USERNAME=penpot@your-domain.com
+PENPOT_SMTP_PASSWORD=
+PENPOT_SMTP_TLS=false
+PENPOT_SMTP_SSL=true
+```
+
+
 
 To change the domain in the `Caddyfile` to your own
 

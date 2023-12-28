@@ -98,7 +98,7 @@ https://subdomain.your-domain:443 {
 }
 ```
 
-**Run Penpot:**
+## 5.Run Penpot:
 
 ``` bash
 docker-compose up -d

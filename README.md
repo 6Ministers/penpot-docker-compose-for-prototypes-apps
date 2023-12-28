@@ -158,11 +158,15 @@ You can find all configuration options in the Configuration section.
 
 
 **Backup Penpot**
+
 https://help.penpot.app/technical-guide/getting-started/#backup-penpot
 
 
+
 **Update Penpot**
+
 https://help.penpot.app/technical-guide/getting-started/#update-penpot-1
+
 To get the latest version of Penpot in your local installation, you just need to execute:
 ``` bash
 docker compose -f docker-compose.yaml pull

@@ -16,13 +16,13 @@ Run for Ubuntu 22.04
 sudo apt-get purge needrestart
 ```
 
-Install docker and docker-compose:
+## 2.Install docker and docker-compose:
 
 ``` bash
 curl -s https://raw.githubusercontent.com/6Ministers/penpot-docker-compose-for-prototypes-apps/master/setup.sh | sudo bash -s
 ```
 
-Download Penpot instance:
+## 3. Download Penpot instance:
 
 
 ``` bash
@@ -42,7 +42,7 @@ Go to the catalog
 ``` bash
 cd penpot
 ```
-In the configuration file `docker-compose.penpot.env`, set the following parameters:
+## 4. In the configuration file `docker-compose.penpot.env`, set the following parameters:
 
 Install what you need, documentation:
 
@@ -86,7 +86,7 @@ https://subdomain.your-domain:443 {
 }
 ```
 
-**Run Penpot:**
+## 5.Run Penpot:
 
 ``` bash
 docker-compose up -d
@@ -95,7 +95,7 @@ docker-compose up -d
 Then open `https://penpot.domain.com:` to access Penpot
 
 
-## Penpot container management
+## 6.Penpot container management
 
 **Run Penpot**:
 

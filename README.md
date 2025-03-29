@@ -137,6 +137,7 @@ docker-compose down
 ```
 
 ## Documentation
+https://help.penpot.app/technical-guide/getting-started/docker/
 https://help.penpot.app/technical-guide/getting-started/
 https://help.penpot.app/technical-guide/configuration/
 
